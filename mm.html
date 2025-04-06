@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="mm.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Our Service Page</h1>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <!-- Service Category 1: Web Development -->
+            <div class="service-category" id="service-webDevelopment">
+                <h3 class="service-title" onclick="toggleService('webDevelopment', this)">Web Development</h3>
+                <div id="webDevelopment" class="service-details">
+                    <p>We build custom websites tailored to your needs, from simple landing pages to complex web
+                        applications.</p>
+                    <ul>
+                        <li>Responsive Websites</li>
+                        <li>E-commerce Development</li>
+                        <li>Web Applications</li>
+                    </ul>
+                    <!-- Rating Section for Web Development Service -->
+                    <div class="service-category" id="service-webDevelopment">
+                        <h3 class="service-title" onclick="toggleService('webDevelopment', this)">Web Development</h3>
+                        <div id="webDevelopment" class="service-details">
+                            <p>We build custom websites tailored to your needs, from simple landing pages to complex web
+                                applications.</p>
+                            <ul>
+                                <li>Responsive Websites</li>
+                                <li>E-commerce Development</li>
+                                <li>Web Applications</li>
+                            </ul>
+                            
+                            <div class="feedback-form">
+                                <h4>Leave a feedback:</h4>
+                                <textarea id="feedback-webDevelopment" placeholder="Write your feedback here..." rows="4" cols="50"></textarea>
+                                <button onclick="submitFeedback('webDevelopment')">Submit Feedback</button>
+                              </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Service Category 2: Graphic Design -->
+            <div class="service-category" id="service-graphicDesign">
+                <h3 class="service-title" onclick="toggleService('graphicDesign', this)">Graphic Design</h3>
+                <div id="graphicDesign" class="service-details">
+                    <p>Our team creates beautiful and creative designs for your brand, from logos to marketing
+                        materials.</p>
+                    <ul>
+                        <li>Logo Design</li>
+                        <li>Brand Identity</li>
+                        <li>Print & Digital Marketing Materials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service Category 3: Marketing -->
+            <div class="service-category" id="service-marketing">
+                <h3 class="service-title" onclick="toggleService('marketing', this)">Marketing</h3>
+                <div id="marketing" class="service-details">
+                    <p>We help businesses grow with targeted marketing strategies that reach your audience effectively.
+                    </p>
+                    <ul>
+                        <li>SEO (Search Engine Optimization)</li>
+                        <li>Social Media Marketing</li>
+                        <li>Email Marketing Campaigns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service Category 4: Consultation -->
+            <div class="service-category" id="service-consultation">
+                <h3 class="service-title" onclick="toggleService('consultation', this)">Consultation</h3>
+                <div id="consultation" class="service-details">
+                    <p>Our experts offer professional advice to guide your business strategy and digital transformation.
+                    </p>
+                    <ul>
+                        <li>Business Strategy</li>
+                        <li>IT Consulting</li>
+                        <li>Brand Consultation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        function toggleService(serviceId, element) {
+            // Get the service details element
+            var serviceDetails = document.getElementById(serviceId);
+
+            // Toggle the visibility of the service details with smooth transition
+            if (serviceDetails.style.display === "none" || serviceDetails.style.display === "") {
+                serviceDetails.style.display = "block";
+                serviceDetails.style.opacity = "1"; // Make it visible with fade-in effect
+            } else {
+                serviceDetails.style.display = "none";
+                serviceDetails.style.opacity = "0"; // Fade out the content
+            }
+
+            // Remove the 'active' class from all service categories
+            var allCategories = document.querySelectorAll('.service-category');
+            allCategories.forEach(function (category) {
+                category.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked category
+            element.parentElement.classList.add('active');
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

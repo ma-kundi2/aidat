@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  #services {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .service-category {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .service-category:hover {
+    transform: scale(1.05); /* Slightly enlarge when hovered */
+  }
+  
+  .service-category h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .service-category p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .service-category ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .service-category ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  /* Hide service details by default */
+  .service-details {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Active state for the clicked service category */
+  .service-category.active {
+    background-color: #0066cc;
+    color: white;
+  }
+  
+  .service-category.active h3 {
+    color: white;
+  }
+  
+  .service-category.active .service-details {
+    display: block;
+    opacity: 1;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  .service-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* When the category is active (clicked) */
+  .service-category.active .service-details {
+    display: block;
+    opacity: 1;
+  }
+
+  /* star */
+
+  .star {
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .star:hover,
+  .star.selected {
+    color: gold;
+  }
+  
+  .rating p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
